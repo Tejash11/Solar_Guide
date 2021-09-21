@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Onboarding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Solar"
+            android:textColor="#0C0C0B"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:textColor="#050505"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Guide"
+            android:textSize="25sp" />
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="40dp"
+        android:padding="0dp"
+        android:visibility="gone"
+        android:id="@+id/onboard_image1"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/solaronboard1"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="40dp"
+        android:padding="0dp"
+        android:id="@+id/onboard_image"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/onboarding2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Analyse"
+            android:id="@+id/onboard_head1"
+            android:textColor="#A32404"
+            android:textSize="28sp"
+            android:fontFamily="@font/poppins_semibold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Solar"
+            android:id="@+id/onboard_head2"
+            android:textSize="28sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#FF6D00"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Power :"
+            android:id="@+id/onboard_head3"
+            android:textSize="28sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#A32404"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/poppins"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:id="@+id/onboard_para"
+        android:textColor="#5C3E01"
+        android:text="Check, If Solar is right for you or not by calculating the power generation on your area"
+    />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:id="@+id/startbtn"
+            android:visibility="invisible"
+            android:background="@drawable/onboardingbar_background"
+            android:layout_above="@+id/linearbars"
+            android:layout_marginBottom="50dp"
+            android:layout_centerHorizontal="true"
+            android:text="Start your project"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:id="@+id/linearbars"
+            android:layout_above="@id/nextbtn"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/onboardingbar_background"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/bar1"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/bar2"
+                android:visibility="invisible"
+                android:background="@drawable/onboardingbar_background"
+                android:layout_weight="1"/>
+
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/backbtn"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/back"
+            android:visibility="invisible"
+            android:padding="8dp"
+            android:layout_alignParentBottom="true"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/nextbtn"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/next"
+            android:layout_alignParentBottom="true"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>
