@@ -2,6 +2,7 @@ package com.example.solarguide;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -46,13 +47,13 @@ public class Input_fragment3 extends Fragment {
 
     public int residential_check, commercial_check, industrial_check = 0;
     public int triangular_check, flat_check, shade_check, ground_check = 0;
-    public int length, width = 0;
+    public float length, width = 0;
     public String latitude, longitude;
     public LocationRequest locationRequest;
 
     EditText length_et, width_et;
     LinearLayout location_fetched;
-    TextView fetchlocation_btn;
+    TextView fetchlocation_btn, custom_location;
 
     LocationManager locationManager;
     // TODO: Rename parameter arguments, choose names that match
@@ -108,14 +109,25 @@ public class Input_fragment3 extends Fragment {
         flat_check = bundle.getInt("flat_check");
         ground_check = bundle.getInt("ground_check");
         shade_check = bundle.getInt("shade_check");
-        length = bundle.getInt("length");
-        width = bundle.getInt("width");
+        length = bundle.getFloat("length");
+        width = bundle.getFloat("width");
 
 
-        // length_et = (EditText) v.findViewById(R.id.length);
-        // width_et = (EditText) v.findViewById(R.id.width);
+
+         length_et = (EditText) v.findViewById(R.id.length);
+         width_et = (EditText) v.findViewById(R.id.width);
+
+         String l = Float.toString(length);
+         length_et.setText(l);
+
+        String w = Float.toString(width);
+        width_et.setText(w);
+
+
+
         location_fetched = (LinearLayout) v.findViewById(R.id.location_fetched);
         fetchlocation_btn = (TextView) v.findViewById(R.id.fetch_location);
+        custom_location = (TextView) v.findViewById(R.id.custom_location);
 
       /*  String l = length_et.getText().toString();
         length = Integer.parseInt(l);
@@ -143,6 +155,55 @@ public class Input_fragment3 extends Fragment {
 
             }
         });
+
+        custom_location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(length_et.getText().toString().isEmpty() || width_et.getText().toString().isEmpty())
+                {
+                    Toast.makeText(getContext(), "Fill in the dimension parameters to proceed", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    String l = length_et.getText().toString();
+                    length = Float.parseFloat(l);
+
+                    String w = width_et.getText().toString();
+                    width = Float.parseFloat(w);
+
+
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("residential_check", residential_check);
+                    bundle.putInt("commercial_check", commercial_check);
+                    bundle.putInt("industrial_check", industrial_check);
+                    bundle.putInt("triangular_check", triangular_check);
+                    bundle.putInt("flat_check", flat_check);
+                    bundle.putInt("ground_check", ground_check);
+                    bundle.putInt("shade_check", shade_check);
+                    bundle.putFloat("length", length);
+                    bundle.putFloat("width", width);
+                    bundle.putString("latitude","0");
+                    bundle.putString("longitude","0");
+                    bundle.putInt("position", -1);
+                    bundle.putString("state_name", null);
+
+
+                    Intent i = new Intent(getContext(), states_list.class);
+                    //i.putExtra("bundle", bundle);
+                    i.putExtras(bundle);
+                    startActivity(i);
+
+
+                }
+
+
+
+
+            }
+        });
+
+
 
 
 
@@ -251,8 +312,8 @@ public class Input_fragment3 extends Fragment {
                     bundle.putInt("flat_check", flat_check);
                     bundle.putInt("ground_check", ground_check);
                     bundle.putInt("shade_check", shade_check);
-                    bundle.putInt("length", length);
-                    bundle.putInt("width", width);
+                    bundle.putFloat("length", length);
+                    bundle.putFloat("width", width);
                     bundle.putString("latitude", "0");
                     bundle.putString("longitude","0");
 

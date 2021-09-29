@@ -12,14 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SolarGuide">
-        <activity android:name=".Splash_screen">
+        <activity android:name=".result"></activity>
+        <activity android:name=".states_list" />
+        <activity android:name=".Splash_screen" />
+        <activity android:name=".Onboarding">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Onboarding"></activity>
         <activity android:name=".MainActivity" />
     </application>
 

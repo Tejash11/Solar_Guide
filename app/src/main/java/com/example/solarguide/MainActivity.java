@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
         bundle.putInt("flat_check", 0);
         bundle.putInt("ground_check", 0);
         bundle.putInt("shade_check", 0);
-        bundle.putInt("length", 0);
-        bundle.putInt("width", 0);
+        bundle.putFloat("length", 0);
+        bundle.putFloat("width", 0);
         bundle.putString("latitude", "0");
         bundle.putString("longitude","0");
 

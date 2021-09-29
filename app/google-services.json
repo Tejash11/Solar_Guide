@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "398826252051",
+    "project_id": "solar-guide",
+    "storage_bucket": "solar-guide.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398826252051:android:deb46a77d62128172d5ce6",
+        "android_client_info": {
+          "package_name": "com.example.solarguide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "398826252051-pfld9i2971172lr7gm29p5oa8gqeja20.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkXox5oSH4Ooo_XV5v2gzPdcbiQZ0csDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "398826252051-pfld9i2971172lr7gm29p5oa8gqeja20.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

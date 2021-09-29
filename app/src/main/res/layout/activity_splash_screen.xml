@@ -6,15 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".Splash_screen">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animation_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:foregroundGravity="center"
-        android:background="#25C4D8"
-        app:lottie_rawRes="@raw/solar"
-        app:lottie_loop="true"
-        app:lottie_autoPlay="true"
-        tools:ignore="MissingClass" />
+<!--    <com.airbnb.lottie.LottieAnimationView-->
+<!--        android:id="@+id/animation_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:foregroundGravity="center"-->
+<!--        android:background="#25C4D8"-->
+<!--        app:lottie_rawRes="@raw/solar"-->
+<!--        app:lottie_loop="true"-->
+<!--        app:lottie_autoPlay="true"-->
+<!--        tools:ignore="MissingClass" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

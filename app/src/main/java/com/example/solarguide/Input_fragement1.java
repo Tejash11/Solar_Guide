@@ -26,7 +26,7 @@ public class Input_fragement1 extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     public int triangular_check, flat_check, shade_check, ground_check=0;
-    public int length =0, width=0;
+    public float length =0, width=0;
     public String latitude , longitude;
 
     // TODO: Rename and change types of parameters
@@ -84,8 +84,8 @@ public class Input_fragement1 extends Fragment {
         flat_check = bundle.getInt("flat_check");
         ground_check = bundle.getInt("ground_check");
         shade_check = bundle.getInt("shade_check");
-        width = bundle.getInt("width");
-        length = bundle.getInt("length");
+        width = bundle.getFloat("width");
+        length = bundle.getFloat("length");
         latitude = bundle.getString("latitude");
         longitude = bundle.getString("longitude");
 
@@ -207,8 +207,8 @@ public class Input_fragement1 extends Fragment {
                     bundle.putInt("flat_check", flat_check);
                     bundle.putInt("ground_check", ground_check);
                     bundle.putInt("shade_check", shade_check);
-                    bundle.putInt("length", length);
-                    bundle.putInt("width", width);
+                    bundle.putFloat("length", length);
+                    bundle.putFloat("width", width);
                     bundle.putString("latitude", latitude);
                     bundle.putString("longitude",longitude);
 

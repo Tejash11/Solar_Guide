@@ -30,7 +30,7 @@ public class Input_fragment2 extends Fragment {
 
     LinearLayout triangular, flat, shade, ground;
     public int triangular_check, flat_check, shade_check, ground_check=0;
-    public int length, width=0;
+    public float length, width=0;
     public String latitude , longitude;
 
 
@@ -88,8 +88,8 @@ public class Input_fragment2 extends Fragment {
         flat_check = bundle.getInt("flat_check");
         ground_check = bundle.getInt("ground_check");
         shade_check = bundle.getInt("shade_check");
-        width = bundle.getInt("width");
-        length = bundle.getInt("length");
+        width = bundle.getFloat("width");
+        length = bundle.getFloat("length");
         latitude = bundle.getString("latitude");
         longitude = bundle.getString("longitude");
 
@@ -251,8 +251,8 @@ public class Input_fragment2 extends Fragment {
                     bundle.putInt("flat_check", flat_check);
                     bundle.putInt("ground_check", ground_check);
                     bundle.putInt("shade_check", shade_check);
-                    bundle.putInt("length", length);
-                    bundle.putInt("width", width);
+                    bundle.putFloat("length", length);
+                    bundle.putFloat("width", width);
                     bundle.putString("latitude", latitude);
                     bundle.putString("longitude",longitude);
 
@@ -261,6 +261,9 @@ public class Input_fragment2 extends Fragment {
                     Fragment myFragment = new Input_fragment3();
                     myFragment.setArguments(bundle);
                     activity.getSupportFragmentManager().beginTransaction().replace(R.id.input_fragment1, myFragment).addToBackStack(null).commit();
+
+                    /*Intent i = new Intent(getContext(), states_list.class);
+                    startActivity(i);*/
 
 
                 }
@@ -309,8 +312,8 @@ public class Input_fragment2 extends Fragment {
                     bundle.putInt("flat_check", flat_check);
                     bundle.putInt("ground_check", ground_check);
                     bundle.putInt("shade_check", shade_check);
-                    bundle.putInt("length", 0);
-                    bundle.putInt("width", 0);
+                    bundle.putFloat("length", length);
+                    bundle.putFloat("width", width);
                     bundle.putString("latitude", "0");
                     bundle.putString("longitude","0");
 
