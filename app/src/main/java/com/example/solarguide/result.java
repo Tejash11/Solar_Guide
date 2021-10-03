@@ -5,6 +5,7 @@ import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.Image;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
@@ -34,6 +35,7 @@ public class result extends AppCompatActivity {
 
     ProgressBar progressBar;
     TextView progress_txt;
+    LinearLayout expense, farms;
 
     TextView fetchbtn;
 
@@ -70,6 +72,25 @@ public class result extends AppCompatActivity {
         //binding = ActivityMainBinding.inflate(getLayoutInflater());
         //setContentView(binding.getRoot());
 
+
+        farms = (LinearLayout) findViewById(R.id.farm);
+        farms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(result.this, farm.class);
+                startActivity(i);
+            }
+        });
+
+
+        expense = (LinearLayout) findViewById(R.id.analysebtn);
+        expense.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(result.this, expense.class);
+                startActivity(i);
+            }
+        });
         janparent = (LinearLayout) findViewById(R.id.janparent);
         febparent = (LinearLayout) findViewById(R.id.febparent);
         marparent = (LinearLayout) findViewById(R.id.marparent);
@@ -104,7 +125,7 @@ public class result extends AppCompatActivity {
 
         progressBar = (ProgressBar) findViewById(R.id.progress_bar);
         progress_txt = (TextView) findViewById(R.id.text_view_progress);
-        fetchbtn = (TextView) findViewById(R.id.fetchbtn);
+        //fetchbtn = (TextView) findViewById(R.id.fetchbtn);
 
 
         /*progressBar.setProgress(60);

@@ -11,4 +11,5 @@
         android:id="@+id/input_fragment1"
         android:layout_height="match_parent"/>
 
+
 </RelativeLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".farm">
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:src="@drawable/sun"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="Ghaziabad, India"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:id="@+id/croppic"
+        android:layout_height="150dp"
+        android:src="@drawable/harvest"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:id="@+id/croppic_below"
+        android:layout_height="150dp"
+        android:src="@drawable/greens"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="vegetables, cucumber, pumpkin etc"
+        android:textSize="15sp"
+        android:id="@+id/crops"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_semibold"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="10dp">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/cardoutline"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:padding="5dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Interspace Farming"
+                android:id="@+id/avhead"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/black"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/avsum"
+                android:text="Cultivation of crops between space of two crops(most commonly observed pattern)"
+                android:fontFamily="@font/poppins"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:textColor="@color/black"/>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/avpic"
+        android:src="@drawable/inter"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/avpic_below"
+        android:src="@drawable/below"/>
+
+
+    <TextView
+        android:layout_width="230dp"
+        android:layout_marginTop="40dp"
+        android:layout_height="50dp"
+        android:background="@drawable/yellowoutline"
+        android:layout_gravity="center"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:id="@+id/interbtn"
+        android:text="Interspace Farming"/>
+
+    <TextView
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:background="@drawable/yellowoutline"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        android:id="@+id/belowbtn"
+        android:gravity="center"
+        android:text="Below the panels"/>
+
+
+
+
+
+</LinearLayout>

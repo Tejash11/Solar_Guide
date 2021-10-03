@@ -72,7 +72,7 @@
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/black"
             android:gravity="center"
-            android:text="Uttar Pradesh, India"/>
+            android:text="Ghaziabad, India"/>
 
 
 
@@ -156,7 +156,7 @@
                         android:textSize="15sp"
                         android:fontFamily="@font/poppins"
                         android:textColor="#003A33"
-                        android:text="Panels : 10 of 1 watt"/>
+                        android:text="Panels : 6 of 1 watt"/>
 
 
                     <TextView
@@ -168,7 +168,7 @@
                         android:textSize="15sp"
                         android:fontFamily="@font/poppins"
                         android:textColor="#003A33"
-                        android:text="At Area : 100 m2"/>
+                        android:text="At Area : 40 m2"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -179,7 +179,7 @@
                         android:textSize="15sp"
                         android:fontFamily="@font/poppins"
                         android:textColor="#003A33"
-                        android:text="1 watt Panel : 4m2"/>
+                        android:text="1 watt Panel : 6.8m2"/>
 
 
                 </LinearLayout>
@@ -629,6 +629,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
+                    android:id="@+id/analysebtn"
                     android:layout_weight="1">
 
                     <ImageView
@@ -643,6 +644,7 @@
                         android:layout_height="match_parent"
                         android:text="Analyse expense"
                         android:textSize="15sp"
+
                         android:fontFamily="@font/poppins_semibold"
                         android:textColor="@color/black"
                         android:gravity="center"
@@ -668,18 +670,43 @@
         </androidx.cardview.widget.CardView>
 
 
-        <TextView
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:text="Fetch"
-            android:layout_marginTop="30dp"
-            android:id="@+id/fetchbtn"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/farm"
             android:textSize="18sp"
+            android:orientation="horizontal"
             android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/yellowoutline"
             android:fontFamily="@font/poppins"
             android:textColor="@color/black"
-            android:gravity="center"
-            android:background="@drawable/onboardingbar_background"/>
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/harvest"
+
+
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Farm with Solar!\n(AgriVoltaics)"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_semibold"/>
+
+
+
+
+        </LinearLayout>
 
 
 
